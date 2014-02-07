@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 7, 2014 1:23:50 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.petjar.entities.Binaryinfo" table="binaryinfo" catalog="petjar">
+        <id name="binaryId" type="java.lang.Integer">
+            <column name="binaryID" />
+            <generator class="identity" />
+        </id>
+        <property name="createDate" type="timestamp">
+            <column name="createDate" length="19" not-null="true" />
+        </property>
+        <property name="modifiedDate" type="timestamp">
+            <column name="modifiedDate" length="19" not-null="true" />
+        </property>
+        <property name="metadata" type="binary">
+            <column name="metadata" not-null="true" />
+        </property>
+        <property name="uri" type="string">
+            <column name="uri" length="250" unique="true" />
+        </property>
+    </class>
+</hibernate-mapping>
